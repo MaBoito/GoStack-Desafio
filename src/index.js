@@ -72,6 +72,18 @@ app.post("/projects/:id/like", (request, response) => {
    return response.json(projects[findProjectsIndex]);
   });
 
+  app.post("/projects/:id/deslike", (request, response) => {
+    const {id}  = request.params;
+    const findProjectsIndex = projects.findIndex(project => project.id === id)
+  
+    if (findProjectsIndex === -1)  {    
+      return response.status(400).json ({ error: 'projects does not exists.' });
+  }
+  
+   projects[findProjectsIndex].likes -=1;
+ 
+   return response.json(projects[findProjectsIndex]);
+  });
 
 app.listen(3333, () => {
     console.log('back-end started!');
