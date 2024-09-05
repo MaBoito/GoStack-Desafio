@@ -1,49 +1,38 @@
-# Método HTTP e Parâmetros
+<p align="center">
+  <img alt="Rocketseat Education" src="https://avatars.githubusercontent.com/u/69590972?s=200&v=4" width="100px" />
+</p>
 
-Esse projeto foi desenvolvido para criar IDs aleatórias com título e dono, listar, alterar o título e o dono e excluir a ID.
-
-
-## ⚙️ Executando o projeto
-
-Para executar o projeto, precisamos do app INSOMNIA baixado.
-Dentro do INSOMNIA iremos criar um novo projeto e como estamos usando a porta: 3333 iremos em "MANAGE ENVIRONMENT" e criremos uma nova base com o seguinte código 
-
-{
-	"base_url": "http://localhost:3333"
-} 
-
-Após isso dentro do projeto iremos adicionar 4 http request um "GET", "POST", "PUT" e "DEL".
-
-- Dentro do GET iremos colocar "/projects/" após a base URL.
-- Dentro do POST iremos colocar "/projects" após a base URL e dentro do Body iremos colocar o código abaixo:
-
-{
-"title": "seu título",
-"owner": "seu nome"
-}
-
-- Dentro do PUT iremos colocar "/projects/ID" após A BASE URL, porém o id que será colocado será gerado somente quando executarmos o projeto e dentro do Body iremos colocar o código abaixo:
-
-{
-"title": "Novo título",
-"owner": "Novo nome"
-}
-
-- Dentro do DEL iremos colocar "/projects/ID" após a base URL, porém o id que será colocado será gerado somente quando executarmos o projeto.
-
-Após finalizarmos as configurações do INSOMNIA, basta executar no terminal yarn dev para finalizar e poder executar o projeto para ver o resultado.
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=Rocketseat&message=Education&color=8257e5&labelColor=202024" alt="Rocketseat Project" />
+  <a href="LICENSE"><img  src="https://img.shields.io/static/v1?label=License&message=MIT&color=8257e5&labelColor=202024" alt="License"></a>
+</p>
 
 
-## 🚀 Tecnologias
+## 💻 Projeto
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+gostack-template-conceitos-nodejs
 
-- Git e Github
-- Insomnia
-- JSON
-- JavaScript
-- Yarn
+## 📝 Licença
 
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
-⌨️ com ❤️ por [Matheus Boito](https://github.com/MaBoito/) 😊
+
+<p align="center">
+  Feito com 💜 by Rocketseat
+</p>
+
+
+<!--START_SECTION:footer-->
+
+<br />
+<br />
+
+<p align="center">
+  <a href="https://discord.gg/rocketseat" target="_blank">
+    <img align="center" src="https://storage.googleapis.com/golden-wind/comunidade/rodape.svg" alt="banner"/>
+  </a>
+</p>
+
+<!--END_SECTION:footer-->
+
