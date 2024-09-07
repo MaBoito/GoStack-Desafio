@@ -2,8 +2,11 @@ const express = require('express');
 
 const { v4: uuid, validate: isUuid } = require('uuid');
 
+const cors = require('cors');   
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 
@@ -71,6 +74,7 @@ app.post("/projects/:id/like", (request, response) => {
   
    return response.json(projects[findProjectsIndex]);
   });
+  
 
   app.post("/projects/:id/deslike", (request, response) => {
     const {id}  = request.params;
@@ -79,8 +83,12 @@ app.post("/projects/:id/like", (request, response) => {
     if (findProjectsIndex === -1)  {    
       return response.status(400).json ({ error: 'projects does not exists.' });
   }
-  
-   projects[findProjectsIndex].likes -=1;
+
+  if    (projects[findProjectsIndex].likes < 0 ){
+    return  response.status(400).json({ error: 'project minimum likes'});
+  }
+
+   projects[findProjectsIndex].likes -=1
  
    return response.json(projects[findProjectsIndex]);
   });
